@@ -5,7 +5,7 @@ import time
 
 
 class handDetector():
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5, modelComplexity=1):
+    def __init__(self, mode=False, maxHands=4, detectionCon=0.5, trackCon=0.5, modelComplexity=1):
         self.mode = mode # static_image_mode
         self.maxHands = maxHands # max_num_hands
         self.detectionCon = detectionCon # min_detection_confidence
@@ -27,35 +27,55 @@ class handDetector():
 
         return img
 
-    def findPosition(self, img, handNo = 0, draw = True):
+    def findPosition(self, img, handNo=0, draw=True):
         lmList = []
 
         if self.results.multi_hand_landmarks:
             curHand = self.results.multi_hand_landmarks[handNo]
 
-            print("\nReading:")
+            # print("\nReading:")
             for id, lm in enumerate(curHand.landmark):
                 h, w, c = img.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)
 
-                lmList.append([id, cx, cy])
+                finger = self.getFinger(id)
+                lmList.append([id, finger, cx, cy])
                 if(id % 4 == 0):
-                    finger = self.getFinger(id)
-                    print(finger, cx, cy)
-                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+                    if draw:
+                        cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
         return lmList
 
-    def getFinger(self, id):
-        if id == 0: return "Wrist:  "
-        if id == 4: return "Thumb:  "
-        if id == 8: return "Index:  "
-        if id == 12: return "Middle: "
-        if id == 16: return "Ring:   "
-        if id == 20: return "Pinky:  "
+    def getFinger(self, id, colon=False):
+        if colon:
+            if id == 0: return "Wrist:  "
+            if id == 4: return "Thumb:  "
+            if id == 8: return "Index:  "
+            if id == 12: return "Middle: "
+            if id == 16: return "Ring:   "
+            if id == 20: return "Pinky:  "
+            return "None: "
+        else:
+            if id == 0: return "Wrist"
+            if id == 4: return "Thumb"
+            if id == 8: return "Index"
+            if id == 12: return "Middle"
+            if id == 16: return "Ring"
+            if id == 20: return "Pinky"
+            return "None"
+
+    def getFingerID(name):
+        if name == "Wrist" or name == "wrist": return 0
+        if name == "Thumb" or name == "thumb": return 4
+        if name == "Index" or name == "index": return 8
+        if name == "Middle" or name == "middle": return 12
+        if name == "Ring" or name == "ring": return 16
+        if name == "Pinky" or name == "pinky": return 20
+
+
         return "Error: "
 
 
-def main():
+def htm(fingerTips=True, trackFinger="None"):
     pTime = 0
     cTime = 0
     cap = cv2.VideoCapture(0)
@@ -63,9 +83,12 @@ def main():
     while True:
         success, img = cap.read()
         img = detector.findHands(img)
-        lmList = detector.findPosition(img)
-        # imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        # results = hands.process(imgRGB)
+        lmList = detector.findPosition(img,0, False)
+
+        if trackFinger != "None":
+            id = handDetector.getFingerID(name=trackFinger)
+            if len(lmList) != 0:
+                print(lmList[id])
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
@@ -74,10 +97,3 @@ def main():
         cv2.putText(img, str(int(fps)), (5, 35), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
         cv2.imshow("Webcam input", img)
         cv2.waitKey(1)
-
-
-
-
-
-if __name__ == "__main__":
-    main()
