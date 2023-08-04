@@ -27,7 +27,7 @@ class handDetector():
 
         return img
 
-    def findPosition(self, img, handNo=0, draw=True):
+    def findPosition(self, img, handNo=0, draw=True, onlyFingerTips=False):
         lmList = []
 
         if self.results.multi_hand_landmarks:
@@ -39,10 +39,15 @@ class handDetector():
                 cx, cy = int(lm.x * w), int(lm.y * h)
 
                 finger = self.getFinger(id)
-                lmList.append([id, finger, cx, cy])
-                if(id % 4 == 0):
+                if not onlyFingerTips:
+                    lmList.append([id, finger, cx, cy])
                     if draw:
                         cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+                else:
+                    if id % 4 == 0:
+                        lmList.append([id, finger, cx, cy])
+                        if draw:
+                            cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
         return lmList
 
     def getFinger(self, id, colon=False):
@@ -94,6 +99,6 @@ def htm(fingerTips=True, trackFinger="None"):
         fps = 1 / (cTime - pTime)
         pTime = cTime
 
-        cv2.putText(img, str(int(fps)), (5, 35), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
+        cv2.putText(img, str(int(fps)), (10, 50), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
         cv2.imshow("Webcam input", img)
         cv2.waitKey(1)
