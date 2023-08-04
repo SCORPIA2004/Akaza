@@ -77,13 +77,18 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
     fontScale = 2
     color = (0, 0, 0)
+    volumeContainerBottomY = 500
+    volumeContainerTopY = 150
+    volumeContainerLeftX = 50
+    volumeContainerRightX = 90
+
     # draw rectangle border
-    cv2.rectangle(img, (47, 147), (87, 503), (0, 0, 0), 3)
+    cv2.rectangle(img, (volumeContainerLeftX - 3, volumeContainerTopY - 3), (volumeContainerRightX + 3, volumeContainerBottomY + 3), (0, 0, 0), 3)
     # draw volume bar
-    cv2.rectangle(img, (50, int(volumeLevelBar)), (85, 500), (0, 255 * (1 - (volumePercentage / 100)), 255 * (volumePercentage / 100)), cv2.FILLED)
+    cv2.rectangle(img, (volumeContainerLeftX, int(volumeLevelBar)), (volumeContainerRightX, 500), (0, 255 * (1 - (volumePercentage / 100)), 255 * (volumePercentage / 100)), cv2.FILLED)
     # draw volume percentage
     cv2.putText(img, f'{int(volumePercentage)} %', (100, 500), font, fontScale, color, 2)
     # draw fps
-    cv2.putText(img, str(int(fps)), (10, 50), font, fontScale, color, 3)
-    cv2.imshow("Image", img)
+    cv2.putText(img, f'FPS: {int(fps)}', (10, 50), font, (fontScale - 1), color, 3)
+    cv2.imshow("Volume Controller", img)
     cv2.waitKey(1)
