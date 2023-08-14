@@ -32,11 +32,9 @@ void main()
 
 }
 
-class test extends StatelessWidget {
-  const test({Key? key}) : super(key: key);
-
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container();
   }
 }
