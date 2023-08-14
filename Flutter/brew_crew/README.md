@@ -1,6 +1,6 @@
 # brew_crew
 
-A new Flutter project.
+A new Flutter project Tutorial
 
 ## Getting Started
 
