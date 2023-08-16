@@ -1,3 +1,4 @@
+import 'package:brew_crew/services/sign_in.dart';
 import 'package:flutter/material.dart';
 
     class Authenticate extends StatefulWidget {
@@ -9,7 +10,7 @@ import 'package:flutter/material.dart';
       @override
       Widget build(BuildContext context) {
         return Container(
-          child: Text('Authenticate widget text'),
+          child: SignIn()
         );
       }
     }
