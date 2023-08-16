@@ -10,6 +10,6 @@ class Wrapper extends StatelessWidget {
 
     // return either home or authenticate widget, depending on whether user is signed in ot not
 
-    return Authenticate();
+    return Home();
   }
 }
