@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import '../../services/auth.dart';
 
 class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+  final Function toggleViewFunc;
+
+  const Register({Key? key, required this.toggleViewFunc}) : super(key: key);
+  // const Register({ required this.toggleViewFunc })
+
   @override
   State<Register> createState() => _RegisterState();
 }
@@ -117,8 +121,24 @@ class _RegisterState extends State<Register> {
                     ),
                     onPressed: () async
                     {
-                      print("Email: $email");
-                      print("Password: $password");
+                      // todo: complete registration
+                    },
+                  ),
+
+                  SizedBox(height: 20.0),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(100, 40),
+                    ),
+
+                    child: Text(
+                      'Back',
+                      style: TextStyle(color: Colors.white, fontSize: 17),
+                    ),
+                    onPressed: ()
+                    {
+                      // todo: go back to sign in page
+                      widget.toggleViewFunc();
                     },
                   ),
                 ],

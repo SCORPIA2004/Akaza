@@ -11,9 +11,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColorApp,
       appBar: AppBar(
-        title: Center(
-          child: Text("Brew Crew"),
-        ),
+        title: Text("Brew Crew"),
         backgroundColor: bgColorAppBar,
         elevation: 0.0,
         actions: <Widget>[

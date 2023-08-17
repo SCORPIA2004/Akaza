@@ -6,16 +6,18 @@ const bgColorApp = const Color(0x0E2E46FF);
 const bgColorAppBar = const Color(0x0D528DFF);
 
 class SignIn extends StatefulWidget {
+  final Function toggleViewFunc;
+  const SignIn({required this.toggleViewFunc});
+  // const Register({ required this.toggleViewFunc })
 
   @override
-
   _SignInState createState() => _SignInState();
 }
 
 
 class _SignInState extends State<SignIn> {
 
-  final AuthService _auth = AuthService();
+  // final AuthService _auth = AuthService();
   String email = "";
   String password = "";
 
@@ -109,9 +111,9 @@ class _SignInState extends State<SignIn> {
                     'Sign up',
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
-                  onPressed: () async
-                  {
+                  onPressed: () {
                   //  Todo: go to register screen
+                    widget.toggleViewFunc();
                   },
                 ),
 
