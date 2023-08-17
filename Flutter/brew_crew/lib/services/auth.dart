@@ -44,5 +44,18 @@ class AuthService
   // register with email and password
 
   // sign out
+  Future signUserOut() async
+  {
+    try
+    {
+      return await _auth.signOut();
+    }
+    catch(e)
+    {
+      print("Error signing out");
+      print(e.toString());
+      return null;
+    }
+  }
 
 }

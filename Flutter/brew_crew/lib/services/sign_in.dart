@@ -30,19 +30,21 @@ class _SignInState extends State<SignIn> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: ElevatedButton(
-          child: Text("Sign in anon"),
-          onPressed:() async {
-            dynamic result = await _auth.signInAnon();
-            if(result == null)
-              print("Error signing in");
-            else
-            {
-              print("Signed in");
-              // print("USER UID is: " + result.uid);
+        child: Center(
+          child: ElevatedButton(
+            child: Text("Sign in anon"),
+            onPressed:() async {
+              dynamic result = await _auth.signInAnon();
+              if(result == null)
+                print("Error signing in");
+              else
+              {
+                print("Signed in");
+                // print("USER UID is: " + result.uid);
 
+              }
             }
-          }
+          ),
         ),
       ),
     );
