@@ -8,11 +8,8 @@ class Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // return either home or authenticate widget, depending on whether user is signed in ot not
 
-    // return Home();
-    // return SignIn();
     return Authenticate();
   }
 }

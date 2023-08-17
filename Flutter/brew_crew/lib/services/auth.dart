@@ -12,17 +12,23 @@ class AuthService
       return user != null ? UserClass(uid: user.uid) : null;
   }
 
+  Stream <UserClass?> get userAuthenticationChanged
+  {
+    return _auth.authStateChanges()
+        // .map((User? userThis) => _userFromFirebaseUser(userThis));           --> same as next line
+        .map(_userFromFirebaseUser);
+  }
+
+
   //  sign in anon
   Future signInAnon() async
   {
     try
     {
-
       // AuthResult result = await _auth.signInAnonymously();     --> deprecated
       UserCredential result = await _auth.signInAnonymously();
-      // FirebaseUser user = result.user;
+      // FirebaseUser user = result.user;                         --> deprecated
       User? user = result.user;
-
       return _userFromFirebaseUser(user);
     }
     catch(e)
