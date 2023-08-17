@@ -1,16 +1,5 @@
-# brew_crew
+# Pilot app for VibeSwap
 
-A new Flutter project Tutorial
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+MVC: 
+<br>
+[![](https://mermaid.ink/img/pako:eNplklFPwjAQx79Kc4YsMYOUARvrg4nigy-8iNFEZ0zZDmxk7dJ1RiR8d7tWZMiWdM3__7u77no7yFWBwKDX22WSECGFYcRtCQnMO5YYMBIseY1B2FUfuRZ8ucE6-MOtVWlRcr2dqY3SbdxFNB1Nxukh9Eg84Jc5UqvV6hy5UbpA3YVG0SjqcBshsWunw3HSsWvMlSxOTkNpPKS0wxjURpwg7VG8vW8_dtn3epls39pwg7eCrzUv-5-Rp14uX0m_f0XmXEivtDsnPWleVai96tdfydnXjW2kNCK3Wc_dO1ViN7JLO2Ah1vLtUPPMvce1qE1b3ANtOmfMlDSW_Kcu0Bgh17X_UQihRF1yUdjBcJebgbv0DJjd2p5-ZGAbYzneGLXYyhyY0Q2G0FTFsUnAVnxTW7XiEtgOvoDRELbA4ngwoTSJ0slwmsR0ug_hWynL00HqnyRKkihKx3EIWAij9NyPqZtWl_DZBbgC-x-MMNVT?type=png)](https://mermaid.live/edit#pako:eNplklFPwjAQx79Kc4YsMYOUARvrg4nigy-8iNFEZ0zZDmxk7dJ1RiR8d7tWZMiWdM3__7u77no7yFWBwKDX22WSECGFYcRtCQnMO5YYMBIseY1B2FUfuRZ8ucE6-MOtVWlRcr2dqY3SbdxFNB1Nxukh9Eg84Jc5UqvV6hy5UbpA3YVG0SjqcBshsWunw3HSsWvMlSxOTkNpPKS0wxjURpwg7VG8vW8_dtn3epls39pwg7eCrzUv-5-Rp14uX0m_f0XmXEivtDsnPWleVai96tdfydnXjW2kNCK3Wc_dO1ViN7JLO2Ah1vLtUPPMvce1qE1b3ANtOmfMlDSW_Kcu0Bgh17X_UQihRF1yUdjBcJebgbv0DJjd2p5-ZGAbYzneGLXYyhyY0Q2G0FTFsUnAVnxTW7XiEtgOvoDRELbA4ngwoTSJ0slwmsR0ug_hWynL00HqnyRKkihKx3EIWAij9NyPqZtWl_DZBbgC-x-MMNVT)
