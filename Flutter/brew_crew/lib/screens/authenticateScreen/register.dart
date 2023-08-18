@@ -1,7 +1,4 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-
 import '../../services/auth.dart';
 
 class Register extends StatefulWidget {
@@ -58,7 +55,7 @@ class _RegisterState extends State<Register> {
 
                   // Email field
                   SizedBox(height: 20.0),
-                  TextFormField(
+                  TextFormField (
                     // change color of text to white
                     style: TextStyle(color: Colors.white, fontSize: 20),
                     decoration: InputDecoration(
@@ -158,10 +155,8 @@ class _RegisterState extends State<Register> {
                     ),
                     onPressed: () async
                     {
-                      // todo: complete registration
                       if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
                       {
-                        print("Email: $email, Password: $password");
                         dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                         if(result == null)
                         {

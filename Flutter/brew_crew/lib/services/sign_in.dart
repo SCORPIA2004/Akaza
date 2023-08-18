@@ -25,6 +25,7 @@ class _SignInState extends State<SignIn> {
 
   String email = "";
   String password = "";
+  String errorMessage = "";
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +43,7 @@ class _SignInState extends State<SignIn> {
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Center(
           child: Form(
+            key: _formKey,
             child: Column(
               // mainAxisSize: MainAxisSize.min,
               children: <Widget>[
@@ -51,7 +53,7 @@ class _SignInState extends State<SignIn> {
 
                 // Email field
                 SizedBox(height: 20.0),
-                TextFormField(
+                TextFormField (
                   // change color of text to white
                   style: TextStyle(color: Colors.white, fontSize: 20),
                   decoration: InputDecoration(
@@ -60,18 +62,19 @@ class _SignInState extends State<SignIn> {
                     filled: true,
                     fillColor: bgColorFieldFill,
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white)
+                        borderSide: BorderSide(color: Colors.white)
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue)
+                        borderSide: BorderSide(color: Colors.blue)
                     ),
                     border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white)
+                        borderSide: BorderSide(color: Colors.white)
                     ),
                   ),
+                  validator: (value) => value!.isEmpty ? "Email can't be empty" : null,
                   onChanged: (value)
                   {
-                      setState(() => email = value);
+                    setState(() => email = value);
                   },
                 ),
 
@@ -95,10 +98,18 @@ class _SignInState extends State<SignIn> {
                         borderSide: BorderSide(color: Colors.white)
                     ),
                   ),
+                  validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : null,
                   onChanged: (value)
                   {
                     setState(() => password = value);
                   },
+                ),
+
+                // Error message
+                SizedBox(height: 20.0),
+                Text(
+                    errorMessage,
+                    style: TextStyle(color: Colors.red, fontSize: 15)
                 ),
 
                 // Sign in button
@@ -114,10 +125,17 @@ class _SignInState extends State<SignIn> {
                     ),
                   onPressed: () async
                   {
-                    // print("Email: $email");
-                    // print("Password: $password");
                     // todo: complete sign in with email address and password
-                    print("Signed in");
+                    if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
+                    {
+                      print("Signed in");
+                      dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+                      if(result == null)
+                      {
+                        setState(()=> errorMessage = "Invalid Username or Password");
+                      }
+                    }
+
                   },
                 ),
 
