@@ -1,5 +1,6 @@
 import 'package:brew_crew/services/auth.dart';
 import 'package:brew_crew/shared/constants.dart';
+import 'package:brew_crew/shared/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -23,6 +24,7 @@ class _SignInState extends State<SignIn> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   String email = "";
   String password = "";
@@ -30,7 +32,7 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: bgColorApp,
       appBar: AppBar(
@@ -101,11 +103,17 @@ class _SignInState extends State<SignIn> {
                     // todo: complete sign in with email address and password
                     if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
                     {
+                      setState(() => loading = true);
                       print("Signed in");
                       dynamic result = await _auth.signInWithEmailAndPassword(email, password);
                       if(result == null)
                       {
-                        setState(()=> errorMessage = "Invalid Username or Password");
+                        setState(()
+                        {
+                          errorMessage = "Invalid Username or Password";
+                          loading = false;
+                        });
+                        // setState(() => loading = false);
                       }
                     }
 
