@@ -16,8 +16,11 @@ class _RegisterState extends State<Register> {
 
   final bgColorApp = const Color(0x0E2E46FF);
   final bgColorAppBar = const Color(0x0D528DFF);
+  final bgColorFieldFill = const Color(0x0D528DFF);
 
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+
   String email = "";
   String password = "";
   String reenter_password = "";
@@ -38,8 +41,14 @@ class _RegisterState extends State<Register> {
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Center(
             child: Form(
+              key: _formKey,
               child: Column(
                 children: <Widget>[
+                  // Heading
+                  SizedBox(height: 20.0),
+                  Text("Glad you're here! 🙌", style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20)),
+
+                  // Email field
                   SizedBox(height: 20.0),
                   TextFormField(
                     // change color of text to white
@@ -47,6 +56,8 @@ class _RegisterState extends State<Register> {
                     decoration: InputDecoration(
                       hintText: 'Email',
                       hintStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: bgColorFieldFill,
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                       ),
@@ -57,12 +68,14 @@ class _RegisterState extends State<Register> {
                           borderSide: BorderSide(color: Colors.white)
                       ),
                     ),
+                    validator: (value) => value!.isEmpty ? "Email can't be empty" : null,
                     onChanged: (value)
                     {
                       setState(() => email = value);
                     },
                   ),
 
+                  // Password field
                   SizedBox(height: 20.0),
                   TextFormField(
                     obscureText: true,
@@ -70,6 +83,8 @@ class _RegisterState extends State<Register> {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       hintStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: bgColorFieldFill,
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                       ),
@@ -80,12 +95,15 @@ class _RegisterState extends State<Register> {
                           borderSide: BorderSide(color: Colors.white)
                       ),
                     ),
+                    validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : null,
+
                     onChanged: (value)
                     {
                       setState(() => password = value);
                     },
                   ),
 
+                  // Re-enter password field
                   SizedBox(height: 20.0),
                   TextFormField(
                     obscureText: true,
@@ -93,6 +111,8 @@ class _RegisterState extends State<Register> {
                     decoration: InputDecoration(
                       hintText: 'Re-enter Password',
                       hintStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: bgColorFieldFill,
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                       ),
@@ -103,12 +123,14 @@ class _RegisterState extends State<Register> {
                           borderSide: BorderSide(color: Colors.white)
                       ),
                     ),
+                    validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : (password != reenter_password ? "Passwords don't match" : null),
                     onChanged: (value)
                     {
                       setState(() => reenter_password = value);
                     },
                   ),
 
+                  // Register button
                   SizedBox(height: 20.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -122,13 +144,19 @@ class _RegisterState extends State<Register> {
                     onPressed: () async
                     {
                       // todo: complete registration
+                      if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
+                      {
+                        print("Email: $email, Password: $password");
+                      }
                     },
                   ),
 
+                  // Back button
                   SizedBox(height: 20.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(100, 40),
+                      backgroundColor: Colors.redAccent,
                     ),
 
                     child: Text(

@@ -2,8 +2,7 @@ import 'package:brew_crew/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-const bgColorApp = const Color(0x0E2E46FF);
-const bgColorAppBar = const Color(0x0D528DFF);
+
 
 class SignIn extends StatefulWidget {
   final Function toggleViewFunc;
@@ -17,7 +16,13 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
 
-  // final AuthService _auth = AuthService();
+  final bgColorApp = const Color(0x0E2E46FF);
+  final bgColorAppBar = const Color(0x0D528DFF);
+  final bgColorFieldFill = const Color(0x0D528DFF);
+
+  final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+
   String email = "";
   String password = "";
 
@@ -38,6 +43,11 @@ class _SignInState extends State<SignIn> {
           child: Form(
             child: Column(
               children: <Widget>[
+                // Heading
+                SizedBox(height: 20.0),
+                Text("Welcome back 👋", style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20)),
+
+                // Email field
                 SizedBox(height: 20.0),
                 TextFormField(
                   // change color of text to white
@@ -45,6 +55,8 @@ class _SignInState extends State<SignIn> {
                   decoration: InputDecoration(
                     hintText: 'Email',
                     hintStyle: TextStyle(color: Colors.white),
+                    filled: true,
+                    fillColor: bgColorFieldFill,
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.white)
                     ),
@@ -61,6 +73,7 @@ class _SignInState extends State<SignIn> {
                   },
                 ),
 
+                // Password field
                 SizedBox(height: 20.0),
                 TextFormField(
                   obscureText: true,
@@ -68,6 +81,8 @@ class _SignInState extends State<SignIn> {
                   decoration: InputDecoration(
                     hintText: 'Password',
                     hintStyle: TextStyle(color: Colors.white),
+                    filled: true,
+                    fillColor: bgColorFieldFill,
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)
                     ),
@@ -84,6 +99,7 @@ class _SignInState extends State<SignIn> {
                   },
                 ),
 
+                // Sign in button
                 SizedBox(height: 20.0),
                 ElevatedButton(
                     // set width of button to 50
@@ -96,23 +112,27 @@ class _SignInState extends State<SignIn> {
                     ),
                   onPressed: () async
                   {
-                    print("Email: $email");
-                    print("Password: $password");
+                    // print("Email: $email");
+                    // print("Password: $password");
+                    // todo: complete sign in with email address and password
+                    print("Signed in");
                   },
                 ),
 
+                // Register button
                 SizedBox(height: 20.0),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(100, 40),
+                    backgroundColor: Colors.redAccent,
                   ),
 
                   child: Text(
-                    'Sign up',
+                    'Register',
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   onPressed: () {
-                  //  Todo: go to register screen
+                  //  Todo: go to register screen video#12
                     widget.toggleViewFunc();
                   },
                 ),
