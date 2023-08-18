@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
         TextButton.icon(
             onPressed: () async
             {
+              print(_auth.toString());
               await _auth.signUserOut();
             },
             icon: Icon(Icons.exit_to_app),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../services/auth.dart';
 import '../../shared/constants.dart';
+import '../../shared/loading.dart';
 
 class Register extends StatefulWidget {
   final Function toggleViewFunc;
@@ -17,12 +18,10 @@ class _RegisterState extends State<Register> {
   final bgColorApp = const Color(0x0E2E46FF);
   final bgColorAppBar = const Color(0x0D528DFF);
   final bgColorFieldFill = const Color(0x0D528DFF);
-  // import the ubuntu font
-  final fontStyle = const TextStyle(fontFamily: 'Ubuntu');
-
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   String email = "";
   String password = "";
@@ -32,7 +31,7 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: bgColorApp,
       appBar: AppBar(
@@ -116,10 +115,17 @@ class _RegisterState extends State<Register> {
                     {
                       if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
                       {
+                        setState(() {
+                          loading = true;
+                        });
                         dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                         if(result == null)
                         {
-                         setState(()=> errorMessage = "Invalid Email");
+                         setState(()
+                         {
+                           errorMessage = "Invalid Email";
+                           loading = false;
+                         });
                         }
                       }
                     },
