@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 import '../../services/auth.dart';
@@ -17,6 +19,9 @@ class _RegisterState extends State<Register> {
   final bgColorApp = const Color(0x0E2E46FF);
   final bgColorAppBar = const Color(0x0D528DFF);
   final bgColorFieldFill = const Color(0x0D528DFF);
+  // import the ubuntu font
+  final fontStyle = const TextStyle(fontFamily: 'Ubuntu');
+
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
@@ -24,6 +29,7 @@ class _RegisterState extends State<Register> {
   String email = "";
   String password = "";
   String reenter_password = "";
+  String errorMessage = "";
 
 
   @override
@@ -132,6 +138,13 @@ class _RegisterState extends State<Register> {
                     },
                   ),
 
+                  // Error message
+                  SizedBox(height: 20.0),
+                  Text(
+                      errorMessage,
+                      style: TextStyle(color: Colors.red, fontSize: 15)
+                  ),
+
                   // Register button
                   SizedBox(height: 20.0),
                   ElevatedButton(
@@ -149,6 +162,11 @@ class _RegisterState extends State<Register> {
                       if(_formKey.currentState!.validate())                     // checks if email and password are entered in correct format or not
                       {
                         print("Email: $email, Password: $password");
+                        dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+                        if(result == null)
+                        {
+                         setState(()=> errorMessage = "Invalid Email");
+                        }
                       }
                     },
                   ),
