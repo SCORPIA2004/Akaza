@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../services/auth.dart';
+import '../../shared/constants.dart';
 
 class Register extends StatefulWidget {
   final Function toggleViewFunc;
@@ -58,21 +59,7 @@ class _RegisterState extends State<Register> {
                   TextFormField (
                     // change color of text to white
                     style: TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: InputDecoration(
-                      hintText: 'Email',
-                      hintStyle: TextStyle(color: Colors.white),
-                      filled: true,
-                      fillColor: bgColorFieldFill,
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blue)
-                      ),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                    ),
+                    decoration: textInputDecoration.copyWith(hintText: 'Email'),
                     validator: (value) => value!.isEmpty ? "Email can't be empty" : null,
                     onChanged: (value)
                     {
@@ -85,21 +72,7 @@ class _RegisterState extends State<Register> {
                   TextFormField(
                     obscureText: true,
                     style: TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: InputDecoration(
-                      hintText: 'Password',
-                      hintStyle: TextStyle(color: Colors.white),
-                      filled: true,
-                      fillColor: bgColorFieldFill,
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blue)
-                      ),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                    ),
+                    decoration: textInputDecoration.copyWith(hintText: 'Password'),
                     validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : null,
 
                     onChanged: (value)
@@ -113,21 +86,7 @@ class _RegisterState extends State<Register> {
                   TextFormField(
                     obscureText: true,
                     style: TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: InputDecoration(
-                      hintText: 'Re-enter Password',
-                      hintStyle: TextStyle(color: Colors.white),
-                      filled: true,
-                      fillColor: bgColorFieldFill,
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blue)
-                      ),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)
-                      ),
-                    ),
+                    decoration: textInputDecoration.copyWith(hintText: 'Re-enter Password'),
                     validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : (password != reenter_password ? "Passwords don't match" : null),
                     onChanged: (value)
                     {

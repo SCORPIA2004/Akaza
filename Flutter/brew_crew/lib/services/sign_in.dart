@@ -1,4 +1,5 @@
 import 'package:brew_crew/services/auth.dart';
+import 'package:brew_crew/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -56,21 +57,7 @@ class _SignInState extends State<SignIn> {
                 TextFormField (
                   // change color of text to white
                   style: TextStyle(color: Colors.white, fontSize: 20),
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    hintStyle: TextStyle(color: Colors.white),
-                    filled: true,
-                    fillColor: bgColorFieldFill,
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue)
-                    ),
-                    border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                  ),
+                  decoration: textInputDecoration.copyWith(hintText: 'Email'),
                   validator: (value) => value!.isEmpty ? "Email can't be empty" : null,
                   onChanged: (value)
                   {
@@ -83,21 +70,7 @@ class _SignInState extends State<SignIn> {
                 TextFormField(
                   obscureText: true,
                   style: TextStyle(color: Colors.white, fontSize: 20),
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    hintStyle: TextStyle(color: Colors.white),
-                    filled: true,
-                    fillColor: bgColorFieldFill,
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue)
-                    ),
-                    border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                  ),
+                  decoration: textInputDecoration.copyWith(hintText: 'Password'),
                   validator: (value) => value!.length < 7 ? "Password should be >8 chars long" : null,
                   onChanged: (value)
                   {
