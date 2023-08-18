@@ -29,6 +29,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: bgColorApp,
       appBar: AppBar(
         backgroundColor: bgColorAppBar,
@@ -42,6 +43,7 @@ class _SignInState extends State<SignIn> {
         child: Center(
           child: Form(
             child: Column(
+              // mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 // Heading
                 SizedBox(height: 20.0),
