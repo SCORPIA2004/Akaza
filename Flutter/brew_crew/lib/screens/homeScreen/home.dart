@@ -14,10 +14,6 @@ const bgColorProfilePicture = const Color(0x36a1ffFF);
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
   final TextEditingController iconController = TextEditingController();
-
-  @override
-
-  // Testing starts
   final List<DropdownMenuEntry> widgetEntries = <DropdownMenuEntry<Widget>>[
     // DropdownMenu(
     //   controller: iconController,
@@ -30,13 +26,17 @@ class Home extends StatelessWidget {
     //   ),
     // ),
     DropdownMenuEntry<Widget>(
-        value: CircleAvatar(
-          backgroundColor: bgColorProfilePicture,
-          child: const Text('AH', style: TextStyle(fontSize: 18, color: Colors.white)),
-        ),
-        label: "label",
-        ),
+      value: CircleAvatar(
+        backgroundColor: bgColorProfilePicture,
+        child: const Text('AH', style: TextStyle(fontSize: 18, color: Colors.white)),
+      ),
+      label: "label",
+    ),
   ];
+
+  @override
+
+  // Testing starts
 
   // widgetEntries.add(DropdownMenuEntry<Widget>());
   // Testing ends
