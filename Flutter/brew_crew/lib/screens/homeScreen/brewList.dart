@@ -15,10 +15,15 @@ class _BrewListState extends State<BrewList> {
 
     final brews = Provider.of<QuerySnapshot?>(context);
     // print(brews.documents);
-    for (var doc in brews!.docs)
-    {
-      print(doc.data());
-    }
+    var collectionFromFirebase = brews;
+    if(collectionFromFirebase != null)
+      {
+        for (var doc in collectionFromFirebase.docs)
+        {
+          print(doc.data());
+        }
+      }
+
     return const Placeholder();
   }
 }
