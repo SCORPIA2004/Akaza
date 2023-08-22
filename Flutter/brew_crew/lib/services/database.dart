@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../models/brew.dart';
+
 class DatabaseService
 {
   // collection reference
@@ -16,6 +18,19 @@ class DatabaseService
       "name": name,
       "strength": strength
     });
+  }
+
+  // get brews list from snapshot
+  List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot)
+  {
+    return snapshot.docs.map((doc)
+    {
+      return Brew(
+        name: doc["name"] ?? "",
+        sugars: doc["sugars"] ?? "0",
+        strength: doc["strength"] ?? 0,
+      );
+    }).toList();
   }
 
   Stream<QuerySnapshot> get brews
