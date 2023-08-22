@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
+import '../../models/brew.dart';
 
 class BrewList extends StatefulWidget {
   const BrewList({Key? key}) : super(key: key);
@@ -13,17 +13,19 @@ class _BrewListState extends State<BrewList> {
   @override
   Widget build(BuildContext context) {
 
-    final brews = Provider.of<QuerySnapshot?>(context);
+    final brews = Provider.of<List<Brew>?>(context);
     // print(brews.documents);
-    var collectionFromFirebase = brews;
-    if(collectionFromFirebase != null)
+    print("WHY NOT PRINTING???");
+    if(brews != null)
       {
-        for (var doc in collectionFromFirebase.docs)
+        brews.forEach((thisBrew)
         {
-          print(doc.data());
-        }
+          print(thisBrew.name);
+          print(thisBrew.sugars);
+          print(thisBrew.strength);
+        });
       }
 
-    return const Placeholder();
+    return Container();
   }
 }

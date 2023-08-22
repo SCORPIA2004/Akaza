@@ -11,10 +11,11 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userDetails = Provider.of<UserClass?>(context);
-    print(userDetails);
+    print(userDetails.toString());
 
 
-    return userDetails == null ? Authenticate() : Home();
+    // return userDetails == null ? Authenticate() : Home();
+    return userDetails != null ? Home() : Authenticate();
     // return Home();
   }
 }

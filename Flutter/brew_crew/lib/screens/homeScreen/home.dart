@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:brew_crew/services/database.dart';
 import 'package:provider/provider.dart';
 import "package:brew_crew/services/auth.dart";
-import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../models/brew.dart';
 import 'brewList.dart';
 
 const bgColorApp = const Color(0x0E2E46FF);
@@ -37,13 +37,12 @@ class Home extends StatelessWidget {
   @override
 
   // Testing starts
-
   // widgetEntries.add(DropdownMenuEntry<Widget>());
   // Testing ends
 
 
   Widget build(BuildContext context) {
-    return StreamProvider<QuerySnapshot?>.value(
+    return StreamProvider<List<Brew>?>.value(
       value: DatabaseService(uid: '').brews,
       initialData: null,
 
