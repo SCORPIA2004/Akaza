@@ -4,35 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles2.css">
     <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
     <title>Home</title>
 </head>
 <body>
     <header>
-        <navbar>
-            <ul class="navList">
-                <li class="navItem"><a href="index.html"><img src="./images/logo.png" alt="Company logo" width="75" height="75"></a></li>
-                <li class="navItem"><a href="gallery.html">Gallery</a></li>
-                <li class="navItem"><a href="products.html">Products</a></li>
-                <li class="navItem"><a href="contact.html">Contact</a></li>
-             </ul>
-        </navbar>
+        <a class="logo" href="/"><img src="images/logo.png" alt="logo" width="50px"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./secondQ.html">About</a></li>
+            </ul>
+        </nav>
+        <button class="cta" onclick=" window.open('https://forms.gle/fqmXXXNg1P4QuFjZ8','_blank')" type="button">Contact</button>
+        <p class="menu cta">Menu</p>
     </header>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="mobile.js"></script>
 
     <main>
         <section class="hero">
-            <div class="child1">
+            <div class="hero-container">
+              <div class="column-left">
                 <h1>Welcome to Solistice</h1>
-                <p class="pHero">Where we aim to create amazing solutions using AI.</p>
-                <button onclick=" window.open('https://forms.gle/fqmXXXNg1P4QuFjZ8','_blank')" type="button">Sign Up</button>
+                <p>Where we aim to create amazing solutions using AI.</p>
+            <button>Get Started</button>
+              </div>
+              <div class="column-right">
+                <img class="hero-image" src="./images/image.jpg" alt="hero image" class="hero-image" height="50px"/>
+              </div>
             </div>
-            <div class="child2">
-                <img src="./images/image.jpg" alt="building" width="500">
+          </section>
+    <section class="products">
+          <div class="images">
+            <h1>Explore our products</h1>
+            <div class="images__container">
+                <div class="images__card">
+                    <h2>CryptoApes</h2>
+                    <p>Ape #0001</p>
+                </div>
+                <div class="images__card">
+                    <h2>CryptoApes</h2>
+                    <p>Ape #0002</p>
+                </div>
+                <div class="images__card">
+                    <h2>CryptoApes</h2>
+                    <p>Ape #0003</p>
+                </div>
+                <div class="images__card">
+                    <h2>CryptoCats</h2>
+                    <p>Ape #0024</p>
+                </div>
+                <div class="images__card">
+                    <h2>CryptoCats</h2>
+                    <p>Ape #0169</p>
+                </div>
+                <div class="images__card">
+                    <h2>CryptoApes</h2>
+                    <p>Ape #7208</p>
+                </div>
             </div>
-        </section>
-        
-        <section class="products">
+        </div>
+    </section>
+    
+        <!-- <section class="products">
         <h1>Meet our top 4 products</h1>
             <section class="info">
                 <figure>
@@ -69,12 +115,12 @@
                 </div>
                 <button class="action-btn" onclick= "window.open('https://forms.gle/fqmXXXNg1P4QuFjZ8','_blank')">Subscribe</button>
             </div>
-        </section>
+        </section> -->
     </main>
     <!-- FOOTER -->
-    <footer>
+    <!-- <footer>
         <h6>Copyright © Solistice 2022</h6>
-    </footer>
+    </footer> -->
     <!-- END FOOTER -->
 </body>
 </html>
