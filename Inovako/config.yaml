@@ -1,0 +1,10 @@
+
+path: C:\Users\mshay\Shayan\Portfolio\Projects\Akaza\Inovako\data  # dataset root dir
+train: images  # train images (relative to 'path')
+val: images  # val images (relative to 'path')
+
+# Classes
+names:
+  0: guitar
+  1: piano
+  2: trumpet
