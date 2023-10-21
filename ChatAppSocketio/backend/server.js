@@ -1,15 +1,20 @@
 import express from "express";
 import dotenv from "dotenv";
 import { chats } from "./data/data.js";
+import cors from "cors";
+
+// const cors = require("cors");
 
 const app = express();
 dotenv.config();
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("API is running yolo...");
 });
 
-app.get("/api/chat", (req, res) => {
+// app.get("/api/chat", (req, res) => {
+app.get("/api/chat", cors({ origin: "http://localhost:3000" }), (req, res) => {
   res.send(chats);
 });
 
