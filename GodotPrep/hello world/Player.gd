@@ -23,12 +23,12 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	$VertPivot.rotate_y(twist_input)
-	$VertPivot/HoriPivot.rotate_x(pitch_input)
-	$VertPivot/HoriPivot.rotation.x = clamp(
-		$VertPivot/HoriPivot.rotation.x,
-		-0.5,
-		0.5
-	)
+	#$VertPivot/HoriPivot.rotate_x(pitch_input)
+	#$VertPivot/HoriPivot.rotation.x = clamp(
+		#$VertPivot/HoriPivot.rotation.x,
+		#-0.5,
+		#0.5
+	#)
 	twist_input = 0.0
 	pitch_input = 0.0
 	
