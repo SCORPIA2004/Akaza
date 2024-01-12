@@ -1,0 +1,410 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwbhy8l3psflh"]
+
+[ext_resource type="PackedScene" uid="uid://b26w5nai3o3tu" path="res://Assets/Environment/gltf/floor_tile_small.gltf.glb" id="1_cdyv3"]
+
+[node name="Floor" type="Node3D"]
+
+[node name="floor_tile_small_gltf" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -1.46946)
+
+[node name="floor_tile_small_gltf2" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -1.46946)
+
+[node name="floor_tile_small_gltf3" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -1.46946)
+
+[node name="floor_tile_small_gltf4" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -1.46946)
+
+[node name="floor_tile_small_gltf5" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -1.46946)
+
+[node name="floor_tile_small_gltf11" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 0.530545)
+
+[node name="floor_tile_small_gltf12" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 0.530545)
+
+[node name="floor_tile_small_gltf13" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 0.530545)
+
+[node name="floor_tile_small_gltf14" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 0.530545)
+
+[node name="floor_tile_small_gltf15" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 0.530545)
+
+[node name="floor_tile_small_gltf6" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -3.46946)
+
+[node name="floor_tile_small_gltf7" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -3.46946)
+
+[node name="floor_tile_small_gltf8" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -3.46946)
+
+[node name="floor_tile_small_gltf9" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -3.46946)
+
+[node name="floor_tile_small_gltf10" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -3.46946)
+
+[node name="floor_tile_small_gltf16" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -7.46946)
+
+[node name="floor_tile_small_gltf17" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -7.46946)
+
+[node name="floor_tile_small_gltf18" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -7.46946)
+
+[node name="floor_tile_small_gltf19" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -7.46946)
+
+[node name="floor_tile_small_gltf20" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -7.46946)
+
+[node name="floor_tile_small_gltf21" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -5.46946)
+
+[node name="floor_tile_small_gltf22" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -5.46946)
+
+[node name="floor_tile_small_gltf23" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -5.46946)
+
+[node name="floor_tile_small_gltf24" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -5.46946)
+
+[node name="floor_tile_small_gltf25" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -5.46946)
+
+[node name="floor_tile_small_gltf26" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -9.46946)
+
+[node name="floor_tile_small_gltf27" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -9.46946)
+
+[node name="floor_tile_small_gltf28" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -9.46946)
+
+[node name="floor_tile_small_gltf29" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -9.46946)
+
+[node name="floor_tile_small_gltf30" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -9.46946)
+
+[node name="floor_tile_small_gltf31" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 4.53054)
+
+[node name="floor_tile_small_gltf32" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 4.53054)
+
+[node name="floor_tile_small_gltf33" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 4.53054)
+
+[node name="floor_tile_small_gltf34" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 4.53054)
+
+[node name="floor_tile_small_gltf35" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 4.53054)
+
+[node name="floor_tile_small_gltf36" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 6.53054)
+
+[node name="floor_tile_small_gltf37" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 6.53054)
+
+[node name="floor_tile_small_gltf38" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 6.53054)
+
+[node name="floor_tile_small_gltf39" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 6.53054)
+
+[node name="floor_tile_small_gltf40" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 6.53054)
+
+[node name="floor_tile_small_gltf41" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 2.53054)
+
+[node name="floor_tile_small_gltf42" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 2.53054)
+
+[node name="floor_tile_small_gltf43" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 2.53054)
+
+[node name="floor_tile_small_gltf44" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 2.53054)
+
+[node name="floor_tile_small_gltf45" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 2.53054)
+
+[node name="floor_tile_small_gltf46" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -19.4695)
+
+[node name="floor_tile_small_gltf47" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -19.4695)
+
+[node name="floor_tile_small_gltf48" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -19.4695)
+
+[node name="floor_tile_small_gltf49" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -19.4695)
+
+[node name="floor_tile_small_gltf50" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -19.4695)
+
+[node name="floor_tile_small_gltf51" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -17.4695)
+
+[node name="floor_tile_small_gltf52" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -17.4695)
+
+[node name="floor_tile_small_gltf53" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -17.4695)
+
+[node name="floor_tile_small_gltf54" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -17.4695)
+
+[node name="floor_tile_small_gltf55" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -17.4695)
+
+[node name="floor_tile_small_gltf56" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -21.4695)
+
+[node name="floor_tile_small_gltf57" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -21.4695)
+
+[node name="floor_tile_small_gltf58" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -21.4695)
+
+[node name="floor_tile_small_gltf59" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -21.4695)
+
+[node name="floor_tile_small_gltf60" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -21.4695)
+
+[node name="floor_tile_small_gltf61" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -25.4695)
+
+[node name="floor_tile_small_gltf62" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -25.4695)
+
+[node name="floor_tile_small_gltf63" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -25.4695)
+
+[node name="floor_tile_small_gltf64" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -25.4695)
+
+[node name="floor_tile_small_gltf65" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -25.4695)
+
+[node name="floor_tile_small_gltf66" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -23.4695)
+
+[node name="floor_tile_small_gltf67" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -23.4695)
+
+[node name="floor_tile_small_gltf68" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -23.4695)
+
+[node name="floor_tile_small_gltf69" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -23.4695)
+
+[node name="floor_tile_small_gltf70" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -23.4695)
+
+[node name="floor_tile_small_gltf71" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -27.4695)
+
+[node name="floor_tile_small_gltf72" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -27.4695)
+
+[node name="floor_tile_small_gltf73" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -27.4695)
+
+[node name="floor_tile_small_gltf74" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -27.4695)
+
+[node name="floor_tile_small_gltf75" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -27.4695)
+
+[node name="floor_tile_small_gltf76" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -13.4695)
+
+[node name="floor_tile_small_gltf77" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -13.4695)
+
+[node name="floor_tile_small_gltf78" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -13.4695)
+
+[node name="floor_tile_small_gltf79" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -13.4695)
+
+[node name="floor_tile_small_gltf80" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -13.4695)
+
+[node name="floor_tile_small_gltf81" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -11.4695)
+
+[node name="floor_tile_small_gltf82" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -11.4695)
+
+[node name="floor_tile_small_gltf83" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -11.4695)
+
+[node name="floor_tile_small_gltf84" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -11.4695)
+
+[node name="floor_tile_small_gltf85" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -11.4695)
+
+[node name="floor_tile_small_gltf86" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, -15.4695)
+
+[node name="floor_tile_small_gltf87" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, -15.4695)
+
+[node name="floor_tile_small_gltf88" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, -15.4695)
+
+[node name="floor_tile_small_gltf89" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, -15.4695)
+
+[node name="floor_tile_small_gltf90" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, -15.4695)
+
+[node name="floor_tile_small_gltf91" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 16.5305)
+
+[node name="floor_tile_small_gltf92" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 16.5305)
+
+[node name="floor_tile_small_gltf93" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 16.5305)
+
+[node name="floor_tile_small_gltf94" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 16.5305)
+
+[node name="floor_tile_small_gltf95" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 16.5305)
+
+[node name="floor_tile_small_gltf96" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 18.5305)
+
+[node name="floor_tile_small_gltf97" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 18.5305)
+
+[node name="floor_tile_small_gltf98" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 18.5305)
+
+[node name="floor_tile_small_gltf99" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 18.5305)
+
+[node name="floor_tile_small_gltf100" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 18.5305)
+
+[node name="floor_tile_small_gltf101" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 14.5305)
+
+[node name="floor_tile_small_gltf102" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 14.5305)
+
+[node name="floor_tile_small_gltf103" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 14.5305)
+
+[node name="floor_tile_small_gltf104" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 14.5305)
+
+[node name="floor_tile_small_gltf105" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 14.5305)
+
+[node name="floor_tile_small_gltf106" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 10.5305)
+
+[node name="floor_tile_small_gltf107" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 10.5305)
+
+[node name="floor_tile_small_gltf108" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 10.5305)
+
+[node name="floor_tile_small_gltf109" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 10.5305)
+
+[node name="floor_tile_small_gltf110" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 10.5305)
+
+[node name="floor_tile_small_gltf111" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 12.5305)
+
+[node name="floor_tile_small_gltf112" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 12.5305)
+
+[node name="floor_tile_small_gltf113" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 12.5305)
+
+[node name="floor_tile_small_gltf114" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 12.5305)
+
+[node name="floor_tile_small_gltf115" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 12.5305)
+
+[node name="floor_tile_small_gltf116" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 8.53054)
+
+[node name="floor_tile_small_gltf117" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 8.53054)
+
+[node name="floor_tile_small_gltf118" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 8.53054)
+
+[node name="floor_tile_small_gltf119" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 8.53054)
+
+[node name="floor_tile_small_gltf120" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 8.53054)
+
+[node name="floor_tile_small_gltf121" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 22.5305)
+
+[node name="floor_tile_small_gltf122" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 22.5305)
+
+[node name="floor_tile_small_gltf123" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 22.5305)
+
+[node name="floor_tile_small_gltf124" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 22.5305)
+
+[node name="floor_tile_small_gltf125" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 22.5305)
+
+[node name="floor_tile_small_gltf126" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 24.5305)
+
+[node name="floor_tile_small_gltf127" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 24.5305)
+
+[node name="floor_tile_small_gltf128" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 24.5305)
+
+[node name="floor_tile_small_gltf129" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 24.5305)
+
+[node name="floor_tile_small_gltf130" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 24.5305)
+
+[node name="floor_tile_small_gltf131" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6584, 0, 20.5305)
+
+[node name="floor_tile_small_gltf132" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6584, 0, 20.5305)
+
+[node name="floor_tile_small_gltf133" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341595, 0, 20.5305)
+
+[node name="floor_tile_small_gltf134" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6584, 0, 20.5305)
+
+[node name="floor_tile_small_gltf135" parent="." instance=ExtResource("1_cdyv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3416, 0, 20.5305)
