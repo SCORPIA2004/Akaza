@@ -10,12 +10,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var rate := 10.0
-	var inputMove := Vector3.ZERO
-	inputMove.x = Input.get_axis("move_left_camera", "move_right_camera")
-	inputMove.z = Input.get_axis("move_forward_camera", "move_backward_camera")
+	var inputMoveCamera := Vector3.ZERO
+	inputMoveCamera.x = Input.get_axis("move_left_camera", "move_right_camera")
+	inputMoveCamera.z = Input.get_axis("move_forward_camera", "move_backward_camera")
 
-	global_transform.origin.x += inputMove.x * rate * delta
-	global_transform.origin.z += inputMove.z * rate * delta
+	global_transform.origin.x += inputMoveCamera.x * rate * delta
+	global_transform.origin.z += inputMoveCamera.z * rate * delta
 	
 func _input(event):
 	if event is InputEventMouseButton:

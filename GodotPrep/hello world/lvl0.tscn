@@ -32,3 +32,17 @@ linear_damp = 3.0
 
 [node name="Floor" parent="." instance=ExtResource("2_xh3oj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -26)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -7)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node3D"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 431.0
+offset_bottom = 215.0
+text = "- Move mouse around to rotate camera
+- Use mouse scroll wheel to zoom in/out
+- Use W A S D to move player around
+- Use arrow keys to move camera around the scene
+- Use esc to get your cursor back"
