@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd0bj5dxxqdwq"]
+[gd_scene load_steps=5 format=3 uid="uid://bd0bj5dxxqdwq"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_x0ljp"]
+[ext_resource type="PackedScene" uid="uid://cbdlb27yecbyo" path="res://camera_3d.tscn" id="2_qj1iy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1rtjn"]
 
@@ -24,5 +25,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 [node name="HoriPivot" type="Node3D" parent="VertPivot"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="VertPivot/HoriPivot"]
+[node name="Camera3D" parent="VertPivot/HoriPivot" instance=ExtResource("2_qj1iy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)

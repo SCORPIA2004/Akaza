@@ -14,8 +14,8 @@ func _ready():
 func _process(delta):
 	var rate := 2000.0
 	var inputMove := Vector3.ZERO
-	inputMove.x = Input.get_axis("move_left", "move_right")
-	inputMove.z = Input.get_axis("move_forward", "move_backward")
+	inputMove.x = Input.get_axis("move_left_player", "move_right_player")
+	inputMove.z = Input.get_axis("move_forward_player", "move_backward_player")
 	
 	apply_central_force(inputMove * rate * delta)
 	
@@ -23,12 +23,7 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	$VertPivot.rotate_y(twist_input)
-	#$VertPivot/HoriPivot.rotate_x(pitch_input)
-	#$VertPivot/HoriPivot.rotation.x = clamp(
-		#$VertPivot/HoriPivot.rotation.x,
-		#-0.5,
-		#0.5
-	#)
+	
 	twist_input = 0.0
 	pitch_input = 0.0
 	
