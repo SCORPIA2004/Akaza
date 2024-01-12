@@ -3,7 +3,7 @@ extends RigidBody3D
 var mouse_sensitivity := 0.001
 var twist_input := 0.0
 var pitch_input := 0.0
-
+var camera_mode := 0	# 0 is without pitch and 1 is with pitch
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,7 +23,7 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	$VertPivot.rotate_y(twist_input)
-	
+
 	twist_input = 0.0
 	pitch_input = 0.0
 	
