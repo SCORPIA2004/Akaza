@@ -11,13 +11,32 @@
 </head>
 <body>
     <h1>Homepage</h1>
-    <div id="root"></div>
+    <div id="banner">
+
+    </div>
+
     <script type="text/babel">
-        const rootElement = document.getElementById('root');
-        const name = 'Josh Perez';
-        const element = <h1>Hello, {name}</h1>;
-        ReactDOM.render(element, rootElement);
+        const Banner = () => {
+            const bannerTitle = "React Banner const"
+            const subtitle = "Subtitle"
+
+            const handleClick = () => {
+                alert('Hello World')
+            }
+
+
+            return (
+                <div>
+                    <h1>{bannerTitle.toUpperCase()}</h1>
+                    <h3>{subtitle}</h3>
+
+                    <button onClick={handleClick}>Click Me</button>
+                </div>
+            )
+        }
+        ReactDOM.render(<Banner />, document.getElementById('banner'))
     </script>
+
 
 </body>
 </html>
